@@ -30,12 +30,19 @@ $(document).keydown(function (key) {
   }
 });
 
+
 /* BONUS */
+// Pallini generati in js
+for (var i = 0; i < $('.images img').length; i++) {
+  $('.nav').append('<i class="fas fa-circle"></i>');
+}
+$('.fas.fa-circle').first().addClass('active first');
+$('.fas.fa-circle').last().addClass('last');
+
 // Cambiare slide via pallini
 $('.fas.fa-circle').click(function () {
     $('.active').removeClass('active');
     $('.images img').eq($(this).index()).addClass('active');
-    $('.fas.fa-circle').eq($(this).index()).addClass('active');    
+    $('.fas.fa-circle').eq($(this).index()).addClass('active');
 });
-
 /* end BONUS */
