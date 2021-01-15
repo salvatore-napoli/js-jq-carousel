@@ -3,6 +3,9 @@ function prevSlide() {
   if (!$('img.active').hasClass('first')) {
     $('.active').removeClass('active')
     .prev().addClass('active');
+  } else {
+    $('.active').removeClass('active');
+    $('.last').addClass('active');
   }
 }
 
@@ -11,6 +14,9 @@ function nextSlide() {
   if (!$('img.active').hasClass('last')) {
     $('.active').removeClass('active')
     .next().addClass('active');
+  } else {
+    $('.active').removeClass('active');
+    $('.first').addClass('active');
   }
 }
 
